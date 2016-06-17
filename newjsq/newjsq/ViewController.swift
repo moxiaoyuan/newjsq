@@ -25,6 +25,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+
+    @IBAction func Del(sender: UIButton) {
+            var str = ""
+            var n = ""
+            var strl = 0
+            str = resultLabel.text!
+            strl = str.characters.count
+            n = (str as NSString).substringWithRange(NSMakeRange(0,strl-1))
+            //n = (str as NSString).substringFromIndex(strl)
+            resultLabel.text = n
+        if n == ""{
+            if operator1 != ""{
+                operator1 = ""
+            }else{
+            operand1 = ""}
+        }else{
+            operand1 = n}
+    }
+    
     @IBAction func didClicked(sender: UIButton) {
         //println("\(sender.currentTitle)")判断是哪个button
         let value = sender.currentTitle//提取每次取的值
@@ -42,9 +62,9 @@ class ViewController: UIViewController {
             resultLabel.text = ""
             return
         }
+        
             
         else if value == "="{
-            
             var result = 0.0
             switch operator1{
                 case "+":
@@ -67,6 +87,7 @@ class ViewController: UIViewController {
                 default:
                 resultLabel.text = "errol"
             }
+            
             
             return
         }

@@ -180,7 +180,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Del"/>
                                 <connections>
-                                    <action selector="didClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vas-LR-1bY"/>
+                                    <action selector="Del:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G8z-Lh-79o"/>
                                 </connections>
                             </button>
                         </subviews>
